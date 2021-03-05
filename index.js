@@ -1,6 +1,6 @@
-const file = require("./export.json");
-const getTag = id => {
-  const item = file.categories.find(cat => cat.id === id);
+const file = require("./2020-export-1606430355142.json");
+const getTag = (id) => {
+  const item = file.categories.find((cat) => cat.id === id);
   return (item && item.name) || "Unknown";
 };
 
@@ -14,7 +14,7 @@ file.talks.forEach((talk, index) => {
     id: index,
     startTime: "2019-09-27T09:30:00+02:00",
     endTime: "2019-09-27T18:00:00+02:00",
-    trackTitle: "Zenika Nantes"
+    trackTitle: "Zenika Nantes",
   };
 });
 
@@ -25,7 +25,7 @@ file.speakers.forEach((speaker, index) => {
     name: speaker.displayName,
     photoUrl: speaker.photoURL,
     socials: [],
-    id: speaker.uid
+    id: speaker.uid,
   };
 });
 
